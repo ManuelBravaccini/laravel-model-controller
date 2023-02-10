@@ -21,15 +21,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>Main</h2>
+                    <h2>Movies</h2>
                 </div>
                 @forelse ($movies as $movie)
-                <div class="col-4 p-4">
+                <div class="movie-cards col-4 p-4">
                     <h5>
                         {{ $movie->title }}
                     </h5>
                     <h6>
-                        {{ $movie->vote }}
+                        {{ $movie->original_title }}, {{ $movie->nationality }}, {{ $movie->date }}
+                    </h6>
+                    <h6>
+                        Vote: {{ $movie->vote }}
                     </h6>
                 </div>
                 @empty
